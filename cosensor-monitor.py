@@ -43,3 +43,4 @@ while (1):
     GPIO.output(3,GPIO.HIGH)
     # Testing: Write alarm status
     print "Alarm is OFF"
+  sleep(5)
