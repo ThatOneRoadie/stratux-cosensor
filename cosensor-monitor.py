@@ -6,7 +6,8 @@ import RPi.GPIO as GPIO
 bus = smbus.SMBus(1)
 
 # Set PPM limit variable to whatever would be an alarm for you
-# For Uncalibrated sensors, use your better judgement or get it calibrated (390 is a fresh air outdoor baseline, depending on area)
+# For Uncalibrated sensors, use your better judgement or get it calibrated (390 is a fresh air outdoor baseline, depending on area).
+# Sensor can also be calibrated by immersing in a pure nitrogen environment and calibrating to 10 (0 if you remove the +10 in the ppm formula below).
 # My system registers car exhaust at about 1000 and Fresh air at around 390 after calibration. I've set 500 as an alarm (Baseline + 100 PPM).
 # Possible future enhancement, set up a baseline on boot, then throw an alarm for a significant positive deviation from that baseline?
 limit_ppm = 500
